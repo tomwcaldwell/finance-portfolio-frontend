@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './index.css';
@@ -13,6 +13,8 @@ import About from './components/Site/About';
 import Contact from './components/Site/Contact';
 
 import Users from './components/Users/Users';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Main = () => {
   return (
@@ -32,4 +34,4 @@ const Main = () => {
   );
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+root.render(<Main />);
